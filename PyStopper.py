@@ -5,7 +5,7 @@ from tkinter import Tk, Frame, Canvas, Button, Scale, Label, HORIZONTAL
 # Starts the tkinter loop thingy and gives it a window to do stuff in.
 class TopWindow:
 
-    def __init__(self, padding=10):
+    def __init__(self):
         self.root = Tk()
         self.frame = Frame(self.root)
         self.frame.pack()
@@ -17,9 +17,7 @@ class TopWindow:
         self.is_green = True
         self.is_playing = False
 
-        pad_kwargs = {"padx": padding, "pady": padding}
-        # stopb = Button(self.root, text="Close program", command=self.close_program)
-        # stopb.pack(**pad_kwargs)
+        pad_kwargs = {"padx": 10, "pady": 10}
 
         self.start_button = Button(self.root, text="Start", command=self.start_playing)
         self.start_button.pack(**pad_kwargs)
@@ -76,5 +74,5 @@ class TopWindow:
     def run(self):
         self.root.mainloop()
 
-our_window = TopWindow(10)
+our_window = TopWindow()
 our_window.run()
