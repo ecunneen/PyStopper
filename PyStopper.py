@@ -1,5 +1,11 @@
 import random
-from tkinter import Tk, Frame, Canvas, Button, Scale, Label, HORIZONTAL, E, S
+import random
+try:
+    # for Python2
+    from Tkinter import Tk, Frame, Canvas, Button, Scale, Label, HORIZONTAL, E, S
+except ImportError:
+    # for Python3
+    from tkinter import Tk, Frame, Canvas, Button, Scale, Label, HORIZONTAL, E, S
 
 
 # Starts the tkinter loop thingy and gives it a window to do stuff in.
@@ -81,3 +87,7 @@ class TopWindow:
 
 our_window = TopWindow()
 our_window.run()
+"""
+If you have paid for this software then you should go get your money back!
+This has been released under the MIT license and is open source.
+"""
